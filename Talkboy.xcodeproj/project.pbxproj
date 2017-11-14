@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		8435689E1FBAB7A4000A451F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435689D1FBAB7A4000A451F /* AppDelegate.swift */; };
-		843568A01FBAB7A4000A451F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435689F1FBAB7A4000A451F /* ViewController.swift */; };
 		843568A31FBAB7A4000A451F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843568A11FBAB7A4000A451F /* Main.storyboard */; };
 		843568A61FBAB7A4000A451F /* Talkboy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 843568A41FBAB7A4000A451F /* Talkboy.xcdatamodeld */; };
 		843568A81FBAB7A4000A451F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843568A71FBAB7A4000A451F /* Assets.xcassets */; };
 		843568AB1FBAB7A4000A451F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843568A91FBAB7A4000A451F /* LaunchScreen.storyboard */; };
+		843568B31FBAB9EF000A451F /* TalkboyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843568B21FBAB9EF000A451F /* TalkboyTableViewController.swift */; };
+		843568B51FBABAD9000A451F /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843568B41FBABAD9000A451F /* RecorderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8435689A1FBAB7A4000A451F /* Talkboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talkboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8435689D1FBAB7A4000A451F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8435689F1FBAB7A4000A451F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		843568A21FBAB7A4000A451F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		843568A51FBAB7A4000A451F /* Talkboy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Talkboy.xcdatamodel; sourceTree = "<group>"; };
 		843568A71FBAB7A4000A451F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843568AA1FBAB7A4000A451F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		843568AC1FBAB7A4000A451F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843568B21FBAB9EF000A451F /* TalkboyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkboyTableViewController.swift; sourceTree = "<group>"; };
+		843568B41FBABAD9000A451F /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				8435689D1FBAB7A4000A451F /* AppDelegate.swift */,
-				8435689F1FBAB7A4000A451F /* ViewController.swift */,
 				843568A11FBAB7A4000A451F /* Main.storyboard */,
+				843568B41FBABAD9000A451F /* RecorderViewController.swift */,
+				843568B21FBAB9EF000A451F /* TalkboyTableViewController.swift */,
 				843568A71FBAB7A4000A451F /* Assets.xcassets */,
 				843568A91FBAB7A4000A451F /* LaunchScreen.storyboard */,
 				843568AC1FBAB7A4000A451F /* Info.plist */,
@@ -139,8 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843568B51FBABAD9000A451F /* RecorderViewController.swift in Sources */,
 				843568A61FBAB7A4000A451F /* Talkboy.xcdatamodeld in Sources */,
-				843568A01FBAB7A4000A451F /* ViewController.swift in Sources */,
+				843568B31FBAB9EF000A451F /* TalkboyTableViewController.swift in Sources */,
 				8435689E1FBAB7A4000A451F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
