@@ -17,6 +17,8 @@ class RecorderViewController: UIViewController {
     @IBOutlet weak var soundNameField: UITextField!
     
     var audioRecorder : AVAudioRecorder?
+    var audioPlayer : AVAudioPlayer?
+    var audioURL : URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +31,7 @@ class RecorderViewController: UIViewController {
         if let basePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first {
             let pathComponents = [basePath, "audio.m4a"]
             if let audioURL = NSURL.fileURL(withPathComponents: pathComponents) {
-                
+                self.audioURL = audioURL
                 var settings : [String:Any] = [:]
                 settings[AVFormatIDKey] = Int(kAudioFormatMPEG4AAC)
                 settings[AVSampleRateKey] = 44100.0
@@ -39,7 +41,9 @@ class RecorderViewController: UIViewController {
                 audioRecorder?.prepareToRecord()
             }
         }
-        
+        playText.isEnabled = false
+        soundNameField.isEnabled = false
+        addText.isEnabled = false
     }
     
     @IBAction func recordButton(_ sender: Any) {
@@ -48,9 +52,15 @@ class RecorderViewController: UIViewController {
             if audioRecorder.isRecording {
                 audioRecorder.stop()
                 recordText.setTitle("Record", for: .normal)
+                playText.isEnabled = true
+                soundNameField.isEnabled = true
+                addText.isEnabled = true
             } else {
                 audioRecorder.record()
                 recordText.setTitle("Stop", for: .normal)
+                playText.isEnabled = false
+                soundNameField.isEnabled = false
+                addText.isEnabled = false
             }
         }
         
@@ -58,6 +68,10 @@ class RecorderViewController: UIViewController {
     }
     
     @IBAction func playButton(_ sender: Any) {
+        if let audioURL = self.audioURL {
+            try? audioPlayer = AVAudioPlayer(contentsOf: audioURL)
+            audioPlayer?.play()
+        }
     }
     
     
